@@ -1,3 +1,14 @@
+# Site Videos
+
+## Animated logo (already in place)
+
+`dc-builders-logo.mp4` — the animated DC Builders logo, shown looping in the
+header of every page and on the splash screen. The players start playback at
+1.9s (skipping the black/blank lead-in) and loop back there just before the
+end, so the black opening frame never shows. If a device blocks autoplay
+(e.g. iPhone Low Power Mode), the fully-formed logo frame (6.5s) is shown as
+a still. Replace this file to update the logo animation everywhere.
+
 # Dave's Avatar Videos
 
 Drop the two finished clips into this folder with EXACTLY these filenames — the

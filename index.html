@@ -334,46 +334,35 @@ body #dm #\31 748866523:not(.photo-gallery-done):not([data-widget-initialized]) 
 <!-- ========= DC Builders Splash Intro (shown once per visitor) ========= -->
 <script>(function(){try{if(!localStorage.getItem('dcbSplashSeen')){document.documentElement.classList.add('dcb-splash-on');}}catch(e){}})();</script>
 <style>
-#dcb-splash{display:none;position:fixed;inset:0;z-index:2147483647;background-color:#16110f;background-image:linear-gradient(rgba(22,17,15,.86),rgba(22,17,15,.94)),url('assets/98299c7c82ad.jpeg');background-position:center;background-size:cover;background-repeat:no-repeat;align-items:center;justify-content:center;padding:20px;opacity:1;transition:opacity .55s ease;overflow-y:auto}
+#dcb-splash{display:none;position:fixed;inset:0;z-index:2147483647;background-color:#14100e;align-items:center;justify-content:center;padding:20px;opacity:1;transition:opacity .55s ease,background-color .7s ease}
 html.dcb-splash-on #dcb-splash{display:flex}
 #dcb-splash.dcb-hide{opacity:0;pointer-events:none}
-.dcb-splash-inner{max-width:740px;width:100%;text-align:center;color:#fff;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;margin:auto}
-#dcb-splash .dcb-splash-logo{width:min(280px,58vw);height:auto;border-radius:8px;margin:0 auto 16px;display:block}
-.dcb-splash-title{font-family:'Jost','Montserrat',Arial,sans-serif;font-weight:600;color:#fff;font-size:clamp(26px,4.6vw,42px);line-height:1.12;margin:0 0 8px}
-.dcb-splash-sub{font-size:clamp(15px,2.1vw,19px);color:#e9e1dc;margin:0 0 20px;letter-spacing:.02em}
-.dcb-splash-videowrap{position:relative;margin:0 auto 12px;max-width:660px;border-radius:12px;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.6);background:#000}
-#dcb-splash-video{display:block;width:100%;max-height:52vh;aspect-ratio:16/9;object-fit:contain;background:#000}
-#dcb-splash-sound{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(255,255,255,.94);color:#463939;border:0;border-radius:999px;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;font-weight:700;font-size:15px;padding:10px 22px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+#dcb-splash.dcb-phase2{background-color:#fff}
+.dcb-splash-stage{max-width:760px;width:100%;text-align:center;margin:auto}
+.dcb-splash-videowrap{position:relative;margin:0 auto;max-width:720px;border-radius:14px;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.6);background:#000;opacity:1;transition:opacity .5s ease}
+#dcb-splash-video{display:block;width:100%;max-height:64vh;aspect-ratio:16/9;object-fit:contain;background:#000}
+#dcb-splash-sound{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(255,255,255,.94);color:#463939;border:0;border-radius:999px;font-family:'Roboto',Arial,sans-serif;font-weight:700;font-size:15px;padding:10px 22px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 #dcb-splash-sound:hover{background:#fff}
-#dcb-splash-fallback{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background-color:#281f1c;background-image:linear-gradient(rgba(40,31,28,.78),rgba(40,31,28,.88)),url('assets/98299c7c82ad.jpeg');background-position:center;background-size:cover;background-repeat:no-repeat;padding:20px}
-#dcb-splash-fallback[hidden]{display:none}
-.dcb-splash-fb-play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:24px;color:#463939}
-.dcb-splash-fb-text{font-size:16px;color:#f1ebe7;max-width:420px;line-height:1.5;margin:0}
-.dcb-splash-cap{font-size:15px;color:#d8cdc7;margin:0 0 22px;letter-spacing:.03em}
-#dcb-splash-enter{display:inline-block;background:#fff;color:#463939;border:0;border-radius:8px;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;font-weight:700;font-size:17px;padding:14px 42px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .15s ease,background .15s ease}
-#dcb-splash-enter:hover{background:#f0eae6;transform:translateY(-1px)}
-#dcb-splash-close{position:absolute;top:14px;right:16px;background:transparent;border:0;color:#e9e1dc;font-size:15px;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;cursor:pointer;padding:10px 12px;letter-spacing:.03em}
+#dcb-splash-logo-outro{display:none;width:min(560px,88vw);height:auto;margin:0 auto;background:#fff}
+#dcb-splash.dcb-phase2 .dcb-splash-videowrap{display:none}
+#dcb-splash.dcb-phase2 #dcb-splash-logo-outro{display:block}
+#dcb-splash-close{position:absolute;top:14px;right:16px;background:transparent;border:0;color:#cfc5bf;font-size:15px;font-family:'Roboto',Arial,sans-serif;cursor:pointer;padding:10px 12px;letter-spacing:.03em}
 #dcb-splash-close:hover{color:#fff;text-decoration:underline}
-@media (max-height:620px){#dcb-splash .dcb-splash-logo{width:min(190px,45vw);margin-bottom:10px}.dcb-splash-title{font-size:clamp(20px,3.4vw,28px)}#dcb-splash-video{max-height:42vh}}
+#dcb-splash.dcb-phase2 #dcb-splash-close{color:#8a7d76}
+#dcb-splash.dcb-phase2 #dcb-splash-close:hover{color:#463939}
 </style>
 <div id="dcb-splash" role="dialog" aria-modal="true" aria-label="Welcome from DC Builders">
-  <button id="dcb-splash-close" type="button">Skip intro <span aria-hidden="true">✕</span></button>
-  <div class="dcb-splash-inner">
-    <video class="dcb-splash-logo dcbLogoAnimV" autoplay muted playsinline preload="auto" width="828" height="316" aria-label="DC Builders logo"><source src="videos/dc-builders-logo.mp4#t=1.9" type="video/mp4"/><img src="assets/3785858f98ad.jpg" alt="DC Builders logo" data-dcb-fallback="1" style="width:100%;height:auto"/></video><style>.dcbLogoAnimV{display:block;width:100%;height:auto;aspect-ratio:828/316;object-fit:cover;background:#fff}</style><script>(function(){var vs=document.querySelectorAll('video.dcbLogoAnimV');for(var i=0;i<vs.length;i++){(function(v){if(v.getAttribute('data-dcb-init'))return;v.setAttribute('data-dcb-init','1');var LS=1.9,STILL=6.5;function still(){function s(){try{v.currentTime=STILL;}catch(e){}}if(v.readyState>=1)s();else v.addEventListener('loadedmetadata',s);}try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.autoplay=false;v.pause();still();return;}}catch(e){}v.addEventListener('timeupdate',function(){if(v.duration&&v.currentTime>v.duration-0.12){try{v.currentTime=LS;}catch(e){}}});v.addEventListener('ended',function(){try{v.currentTime=LS;}catch(e){}var p=v.play();if(p&&p.catch)p.catch(still);});var p=v.play();if(p&&p.catch)p.catch(still);})(vs[i]);}})();</script>
-    <p class="dcb-splash-title">Welcome to DC&nbsp;Builders</p>
-    <p class="dcb-splash-sub">Custom Home Builders &mdash; Serving Cape Cod &amp; The Islands</p>
+  <button id="dcb-splash-close" type="button">Skip intro <span aria-hidden="true">&#10005;</span></button>
+  <div class="dcb-splash-stage">
     <div class="dcb-splash-videowrap">
-      <video id="dcb-splash-video" playsinline muted preload="none">
+      <video id="dcb-splash-video" playsinline muted preload="none" aria-label="Dave Cleary welcomes you to DC Builders">
         <source src="videos/dave-intro.mp4" type="video/mp4"/>
       </video>
-      <div id="dcb-splash-fallback" hidden>
-        <div class="dcb-splash-fb-play" aria-hidden="true">&#9654;</div>
-        <p class="dcb-splash-fb-text">Dave&rsquo;s personal welcome video is on its way &mdash; come on in and look around.</p>
-      </div>
       <button id="dcb-splash-sound" type="button">&#128266;&nbsp;Play with sound</button>
     </div>
-    <p class="dcb-splash-cap">Dave Cleary &middot; Owner &amp; Operator &middot; 40+ Years Building on Cape Cod</p>
-    <button id="dcb-splash-enter" type="button">Enter Site &rarr;</button>
+    <video id="dcb-splash-logo-outro" muted playsinline preload="auto" aria-label="DC Builders animated logo">
+      <source src="videos/dc-builders-logo.mp4#t=1.9" type="video/mp4"/>
+    </video>
   </div>
 </div>
 <script>
@@ -382,54 +371,67 @@ html.dcb-splash-on #dcb-splash{display:flex}
   if(!sp)return;
   if(!document.documentElement.classList.contains('dcb-splash-on')){if(sp.parentNode)sp.parentNode.removeChild(sp);return;}
   var v=document.getElementById('dcb-splash-video');
-  var fb=document.getElementById('dcb-splash-fallback');
+  var logo=document.getElementById('dcb-splash-logo-outro');
   var snd=document.getElementById('dcb-splash-sound');
-  var enter=document.getElementById('dcb-splash-enter');
   var closeBtn=document.getElementById('dcb-splash-close');
+  var reduce=false;
+  try{reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
+  if(reduce){
+    try{localStorage.setItem('dcbSplashSeen','1');}catch(e){}
+    if(sp.parentNode)sp.parentNode.removeChild(sp);
+    document.documentElement.classList.remove('dcb-splash-on');
+    return;
+  }
   var prevOverflow=document.body.style.overflow;
   document.body.style.overflow='hidden';
-  var done=false,endTimer=null;
+  var done=false,phase=1,endT=null;
   function dismiss(){
     if(done)return;done=true;
     try{localStorage.setItem('dcbSplashSeen','1');}catch(e){}
-    try{if(v)v.pause();}catch(e){}
+    try{if(v)v.pause();if(logo)logo.pause();}catch(e){}
     sp.classList.add('dcb-hide');
     document.body.style.overflow=prevOverflow;
     setTimeout(function(){if(sp.parentNode)sp.parentNode.removeChild(sp);document.documentElement.classList.remove('dcb-splash-on');},600);
   }
-  function showFallback(){
-    if(fb&&!fb.hidden)return;
-    if(v)v.style.display='none';
-    if(snd)snd.style.display='none';
-    if(fb)fb.hidden=false;
-    endTimer=setTimeout(dismiss,8000);
+  function phase2(){
+    if(done||phase===2)return;phase=2;
+    try{if(v)v.pause();}catch(e){}
+    sp.classList.add('dcb-phase2');
+    if(!logo){setTimeout(dismiss,400);return;}
+    function logoFailed(){return logo.readyState===0&&(logo.networkState===3||(logo.error&&logo.error.code));}
+    logo.addEventListener('ended',function(){setTimeout(dismiss,350);});
+    logo.addEventListener('error',dismiss);
+    var ls=logo.querySelector('source');
+    if(ls)ls.addEventListener('error',dismiss);
+    setTimeout(function(){if(logoFailed())dismiss();},1500);
+    try{logo.load();}catch(e){}
+    var p=logo.play();
+    if(p&&p.catch)p.catch(function(){setTimeout(dismiss,2500);});
   }
   function vidFailed(){return v&&v.readyState===0&&(v.networkState===3||(v.error&&v.error.code));}
   if(v){
     var src=v.querySelector('source');
-    if(src)src.addEventListener('error',showFallback);
-    v.addEventListener('error',showFallback);
-    setTimeout(function(){if(vidFailed())showFallback();},1500);
-    setTimeout(function(){if(vidFailed())showFallback();},4000);
-    v.addEventListener('ended',function(){endTimer=setTimeout(dismiss,400);});
-    var reduce=false;
-    try{reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
-    try{v.preload=reduce?'metadata':'auto';v.load();}catch(e){}
-    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
-    if(snd)snd.addEventListener('click',function(){try{if(endTimer)clearTimeout(endTimer);v.muted=false;v.currentTime=0;var p2=v.play();if(p2&&p2.catch)p2.catch(function(){});snd.style.display='none';}catch(e){}});
-  }
-  if(enter)enter.addEventListener('click',dismiss);
+    if(src)src.addEventListener('error',phase2);
+    v.addEventListener('error',phase2);
+    setTimeout(function(){if(vidFailed())phase2();},1500);
+    setTimeout(function(){if(vidFailed())phase2();},4000);
+    v.addEventListener('ended',function(){endT=setTimeout(phase2,300);});
+    try{v.preload='auto';v.load();}catch(e){}
+    var p=v.play();if(p&&p.catch)p.catch(function(){});
+    if(snd)snd.addEventListener('click',function(){try{if(endT)clearTimeout(endT);v.muted=false;v.currentTime=0;var p2=v.play();if(p2&&p2.catch)p2.catch(function(){});snd.style.display='none';}catch(e){}});
+  }else{phase2();}
+  setTimeout(function(){if(!done)dismiss();},40000);
   if(closeBtn)closeBtn.addEventListener('click',dismiss);
   document.addEventListener('keydown',function(e){if(e.key==='Escape')dismiss();});
   sp.addEventListener('keydown',function(e){
     if(e.key!=='Tab')return;
-    var f=[closeBtn,snd,enter].filter(function(b){return b&&b.offsetParent!==null;});
+    var f=[closeBtn,snd].filter(function(b){return b&&b.offsetParent!==null;});
     if(!f.length)return;
     var first=f[0],last=f[f.length-1];
     if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
     else if(!e.shiftKey&&(document.activeElement===last||!sp.contains(document.activeElement))){e.preventDefault();first.focus();}
   });
-  setTimeout(function(){try{(enter||closeBtn).focus();}catch(e){}},50);
+  setTimeout(function(){try{closeBtn.focus();}catch(e){}},50);
 })();
 </script>
 <!-- ========= End DC Builders Splash Intro ========= -->

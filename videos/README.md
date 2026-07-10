@@ -9,6 +9,13 @@ end, so the black opening frame never shows. If a device blocks autoplay
 (e.g. iPhone Low Power Mode), the fully-formed logo frame (6.5s) is shown as
 a still. Replace this file to update the logo animation everywhere.
 
+## Splash background footage (already in place)
+
+`splash-bg.mp4` — silent b-roll (audio track stripped) that plays full-screen,
+dimmed, behind Dave's intro on the splash. Starts and restarts in sync with
+Dave's video and cuts to the animated-logo phase the moment his intro ends.
+Trimmed to the same 15.04s duration as dave-intro.mp4.
+
 # Dave's Avatar Videos
 
 Drop the two finished clips into this folder with EXACTLY these filenames — the

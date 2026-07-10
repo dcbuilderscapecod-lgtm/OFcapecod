@@ -1478,7 +1478,7 @@ background-size:cover !important}
     <a class="dcb-svc-btn" href="/request-a-consultation">Request a Free Consultation</a>
   </div>
 </div>
-<script>(function(){var v=document.getElementById('dcb-svc-video');var f=document.getElementById('dcb-svc-fallback');if(!v||!f)return;function fb(){v.style.display='none';f.hidden=false;}function chk(){if(v.networkState===3||(v.error&&v.error.code)){fb();return true;}return false;}if(chk())return;var s=v.querySelector('source');if(s)s.addEventListener('error',fb);v.addEventListener('error',fb);setTimeout(chk,1200);setTimeout(chk,4000);})();</script>
+<script>(function(){var v=document.getElementById('dcb-svc-video');var f=document.getElementById('dcb-svc-fallback');if(!v||!f)return;function fb(){v.style.display='none';f.hidden=false;}function chk(){if(v.readyState===0&&(v.networkState===3||(v.error&&v.error.code))){fb();return true;}return false;}var s=v.querySelector('source');if(s)s.addEventListener('error',fb);v.addEventListener('error',fb);setTimeout(chk,1500);setTimeout(chk,4000);})();</script>
 </div>
 </div>
 </div>

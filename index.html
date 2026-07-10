@@ -404,22 +404,19 @@ html.dcb-splash-on #dcb-splash{display:flex}
     if(fb)fb.hidden=false;
     endTimer=setTimeout(dismiss,8000);
   }
-  function vidFailed(){return v&&(v.networkState===3||(v.error&&v.error.code));}
+  function vidFailed(){return v&&v.readyState===0&&(v.networkState===3||(v.error&&v.error.code));}
   if(v){
-    if(vidFailed()){showFallback();}
-    else{
-      var src=v.querySelector('source');
-      if(src)src.addEventListener('error',showFallback);
-      v.addEventListener('error',showFallback);
-      setTimeout(function(){if(vidFailed())showFallback();},1200);
-      setTimeout(function(){if(vidFailed())showFallback();},4000);
-      v.addEventListener('ended',function(){endTimer=setTimeout(dismiss,400);});
-      var reduce=false;
-      try{reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
-      try{v.preload=reduce?'metadata':'auto';v.load();}catch(e){}
-      if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
-      if(snd)snd.addEventListener('click',function(){try{if(endTimer)clearTimeout(endTimer);v.muted=false;v.currentTime=0;var p2=v.play();if(p2&&p2.catch)p2.catch(function(){});snd.style.display='none';}catch(e){}});
-    }
+    var src=v.querySelector('source');
+    if(src)src.addEventListener('error',showFallback);
+    v.addEventListener('error',showFallback);
+    setTimeout(function(){if(vidFailed())showFallback();},1500);
+    setTimeout(function(){if(vidFailed())showFallback();},4000);
+    v.addEventListener('ended',function(){endTimer=setTimeout(dismiss,400);});
+    var reduce=false;
+    try{reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
+    try{v.preload=reduce?'metadata':'auto';v.load();}catch(e){}
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+    if(snd)snd.addEventListener('click',function(){try{if(endTimer)clearTimeout(endTimer);v.muted=false;v.currentTime=0;var p2=v.play();if(p2&&p2.catch)p2.catch(function(){});snd.style.display='none';}catch(e){}});
   }
   if(enter)enter.addEventListener('click',dismiss);
   if(closeBtn)closeBtn.addEventListener('click',dismiss);

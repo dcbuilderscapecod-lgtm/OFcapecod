@@ -26,7 +26,7 @@ code changes needed:
 |------|----------------|---------|
 | `dave-intro.mp4` | Full-screen splash intro on the homepage (every visit) | Dave introduces himself and DC Builders (~15 sec) |
 | `dave-chat-intro.mp4` | Ask Dave section on the homepage (above the reviews) | Dave introduces the chat assistant (~15 sec) |
-| `dave-services.mp4` | *(section removed from Construction Services for now — video being re-edited; re-add the section + file together when the new cut is ready)* | Dave on what we offer and our building technology (~15 sec) |
+| `dave-services.mp4` | Meet Dave section at the top of Construction Services | Dave on what we offer and our building technology (~15 sec). Restored July 13 2026; currently the same cut as `dave-chat-intro.mp4` — overwrite this file when a new edit is ready. |
 
 ## Format guidance
 - **MP4 (H.264 + AAC)** — plays everywhere.

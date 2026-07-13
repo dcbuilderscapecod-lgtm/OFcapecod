@@ -1439,7 +1439,30 @@ html.dcb-splash-on #dcb-splash{display:flex}
  <meta itemprop="transcript" content=""></meta> 
  <div class="vidInner"> <center> <p class="vidTitle1">Learn More About</p> 
  <p class="vidTitle2">DC Builders</p> 
- <div class="playIcon"> <a value="hibu-video-splash" type="popup" href="assets/def7797e7ba3.bin" raw_url="/site/adb5d439eee94341b155f9417202fff0assets/def7797e7ba3.bin?nee=true&ed=true&showOriginal=true&preview=true&dm_try_mode=true&dm_checkSync=1" popup_target="hibu-video-splash" link_type="popup"><img src="assets/e0c9285d5490.png" alt="Play Video" class="playIcon" onerror="handleImageLoadError(this)"/></a> 
+ <div class="playIcon"> <a href="videos/dc-builders-promo.mp4" onclick="return dcbPromoPlay();"><img src="assets/e0c9285d5490.png" alt="Play Video" class="playIcon" onerror="handleImageLoadError(this)"/></a><script>
+function dcbPromoPlay(){
+  var o=document.getElementById('dcb-promo-overlay');
+  if(!o){
+    o=document.createElement('div');o.id='dcb-promo-overlay';
+    o.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;z-index:2147483000;background:rgba(10,8,7,.93);display:flex;align-items:center;justify-content:center;padding:4vmin';
+    var v=document.createElement('video');
+    v.controls=true;v.playsInline=true;v.setAttribute('playsinline','');
+    v.src='videos/dc-builders-promo.mp4';
+    v.style.cssText='width:100%;max-width:1100px;max-height:88vh;background:#000;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6)';
+    var x=document.createElement('button');
+    x.type='button';x.setAttribute('aria-label','Close video');x.innerHTML='&#10005;';
+    x.style.cssText='position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(20,16,14,.7);color:#fff;font-size:18px;cursor:pointer;line-height:1';
+    var esc=function(e){if(e.key==='Escape')close();};
+    var close=function(){try{v.pause();}catch(e){}o.style.display='none';document.removeEventListener('keydown',esc);};
+    x.addEventListener('click',close);
+    o.addEventListener('click',function(e){if(e.target===o)close();});
+    o.appendChild(v);o.appendChild(x);document.body.appendChild(o);
+    o.dcbOpen=function(){o.style.display='flex';try{v.currentTime=0;}catch(e){}document.addEventListener('keydown',esc);var p=v.play();if(p&&p.catch)p.catch(function(){});};
+  }
+  o.dcbOpen();
+  return false;
+}
+</script> 
 </div> 
 </center> 
 </div> 

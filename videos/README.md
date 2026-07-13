@@ -26,7 +26,8 @@ code changes needed:
 |------|----------------|---------|
 | `dave-intro.mp4` | Full-screen splash intro on the homepage (every visit) | Dave introduces himself and DC Builders (~15 sec) |
 | `dave-chat-intro.mp4` | Ask Dave section on the homepage (above the reviews) | Dave introduces the chat assistant (~15 sec) |
-| `dave-services.mp4` | Meet Dave section at the top of Construction Services | Dave on what we offer and our building technology (~15 sec). Restored July 13 2026; currently the same cut as `dave-chat-intro.mp4` — overwrite this file when a new edit is ready. |
+| `dave-services.mp4` | *(no section on the site right now — the Meet Dave block was removed from Construction Services at the owner's request; re-add section + file together if a new avatar cut is ever wanted)* | Dave on what we offer and our building technology (~15 sec) |
+| `dc-builders-promo.mp4` | "Learn More About DC Builders" play button on the homepage and Construction Services (opens in a pop-up player) | The original 30-sec site promo montage of finished jobs, with whistling background music. Rescued July 13 2026 from Hibu's video CDN (videos.hibustudio.com/2023/dc-builders-7002658649.mp4) after the Duda export shipped only a broken popup link (assets/def7797e7ba3.bin). Now self-hosted. |
 
 ## Format guidance
 - **MP4 (H.264 + AAC)** — plays everywhere.

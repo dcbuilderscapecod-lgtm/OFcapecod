@@ -1440,101 +1440,7 @@ background-size:cover !important}
 </div> 
 </div> 
 </div> 
- <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_construction-services"> <div id="allWrapper" class="allWrapper"> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="1" class="dmDefaultRespTmpl" id="1763854611"> <div class="innerPageTmplBox dmDefaultPage  dmRespRowsWrapper" id="1260607478"> <!-- ========= Meet Dave: Offer & Technology video section ========= -->
-<div class="dmRespRow" id="4700000001" style="background:linear-gradient(135deg,#352a2a 0%,#463939 55%,#544545 100%);padding:0;">
-<style>
-.dcb-svc{display:flex;flex-wrap:wrap;align-items:center;gap:36px;max-width:1120px;margin:0 auto;padding:46px 4% 50px}
-.dcb-svc-video{flex:1 1 460px;min-width:290px;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 16px 44px rgba(0,0,0,.45);background:#000}
-#dcb-svc-video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#000}
-#dcb-svc-fallback{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background-color:#231b19;background-image:linear-gradient(rgba(35,27,25,.76),rgba(35,27,25,.88)),url('assets/98299c7c82ad.jpeg');background-position:center;background-size:cover;background-repeat:no-repeat;padding:20px;text-align:center}
-#dcb-svc-fallback[hidden]{display:none}
-.dcb-svc-fb-play{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:22px;color:#463939}
-.dcb-svc-fb-text{font-family:'Roboto','Source Sans Pro',Arial,sans-serif;font-size:16px;color:#f1ebe7;max-width:400px;line-height:1.5;margin:0}
-.dcb-svc-text{flex:1 1 380px;min-width:270px;color:#fff;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;text-align:left}
-.dcb-svc-kicker{font-family:'Roboto','Source Sans Pro',Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em;color:#cbbdb6;text-transform:uppercase;margin:0 0 10px}
-.dcb-svc-title{font-family:'Jost','Montserrat',Arial,sans-serif;font-weight:600;color:#fff;font-size:clamp(24px,3.2vw,34px);line-height:1.18;margin:0 0 14px}
-.dcb-svc-text p.dcb-svc-body{font-size:17px;line-height:1.65;color:#efe9e6;margin:0 0 24px}
-.dcb-svc-btn{display:inline-block;background:#fff;color:#463939;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;font-weight:700;font-size:16px;padding:13px 30px;border-radius:6px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.3);transition:background .15s ease,transform .15s ease}
-.dcb-svc-btn:hover{background:#f0eae6;color:#463939;transform:translateY(-1px)}
-.dcb-svc-sound{position:absolute;top:12px;right:12px;display:flex;align-items:center;gap:7px;background:rgba(20,16,14,.72);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s ease}
-.dcb-svc-sound:hover{background:rgba(20,16,14,.9)}
-@media (max-width:767px){.dcb-svc{padding:34px 5% 38px;gap:24px}.dcb-svc-text{text-align:center}}
-</style>
-<div class="dmRespColsWrapper" id="4700000002">
-<div class="dmRespCol small-12 medium-12 large-12" id="4700000003">
-<div class="dcb-svc">
-  <div class="dcb-svc-video">
-    <video id="dcb-svc-video" controls muted loop playsinline preload="metadata" poster="assets/98299c7c82ad.jpeg">
-      <source src="videos/dave-services.mp4" type="video/mp4"/>
-      Your browser does not support HTML video.
-    </video>
-    <div id="dcb-svc-fallback" hidden>
-      <div class="dcb-svc-fb-play" aria-hidden="true">&#9654;</div>
-      <p class="dcb-svc-fb-text">Dave&rsquo;s video on what we offer and the technology we build with is coming soon.</p>
-    </div>
-    <button type="button" class="dcb-svc-sound" id="dcb-svc-sound" aria-label="Play with sound">&#128266; Tap for sound</button>
-  </div>
-  <div class="dcb-svc-text">
-    <p class="dcb-svc-kicker">Meet the Owner</p>
-    <p class="dcb-svc-title">What We Offer &amp; Our Technology</p>
-    <p class="dcb-svc-body">In 15 seconds, owner Dave Cleary walks you through what DC&nbsp;Builders delivers &mdash; custom homes, additions, remodels, framing and finish work &mdash; and the high-performance, energy-smart building technology behind every project we take on across Cape Cod &amp; The Islands.</p>
-    <a class="dcb-svc-btn" href="/request-a-consultation">Request a Free Consultation</a>
-  </div>
-</div>
-<script>
-(function(){
-  var v = document.getElementById('dcb-svc-video');
-  var f = document.getElementById('dcb-svc-fallback');
-  var snd = document.getElementById('dcb-svc-sound');
-  if (!v) return;
-  function fb(){ v.style.display='none'; if(snd) snd.style.display='none'; if(f) f.hidden=false; }
-  function chk(){ if(v.readyState===0&&(v.networkState===3||(v.error&&v.error.code))){ fb(); return true; } return false; }
-  var s = v.querySelector('source');
-  if (s) s.addEventListener('error', fb);
-  v.addEventListener('error', fb);
-  setTimeout(chk, 1500);
-  setTimeout(chk, 4000);
-  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var soundOn = false;
-  function tryPlay(){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
-  if (snd) snd.addEventListener('click', function(){
-    soundOn = true;
-    v.loop = false;
-    v.muted = false;
-    v.currentTime = 0;
-    snd.style.display = 'none';
-    tryPlay();
-  });
-  v.addEventListener('volumechange', function(){
-    if (!v.muted && !soundOn) { soundOn = true; v.loop = false; if (snd) snd.style.display = 'none'; }
-  });
-  v.addEventListener('ended', function(){
-    if (!soundOn) return;
-    soundOn = false;
-    v.muted = true;
-    v.loop = true;
-    if (snd) snd.style.display = '';
-    tryPlay();
-  });
-  if (reduced) return;
-  v.muted = true;
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { tryPlay(); }
-        else if (!v.paused) { v.pause(); }
-      });
-    }, {threshold: 0.35}).observe(v);
-  } else {
-    tryPlay();
-  }
-})();
-</script>
-</div>
-</div>
-</div>
-<!-- ========= End Meet Dave section ========= -->
- <div class="dmRespRow u_1749227485 hasBackgroundOverlay" style="text-align: center;" id="1749227485"> <div class="dmRespColsWrapper" id="1675328968"> <div class="u_1912801975 dmRespCol small-12 medium-12 large-12" id="1912801975"> <div class="u_1669238038 dmNewParagraph" data-element-type="paragraph" id="1669238038" style="transition: opacity 1s ease-in-out 0s; text-align: center;" data-version="5"> <h1 class="text-align-center" style="line-height: 1.2;"><span style="text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px; color: rgb(255, 255, 255); display: initial;">Custom Home Construction</span></h1> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_construction-services"> <div id="allWrapper" class="allWrapper"> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="1" class="dmDefaultRespTmpl" id="1763854611"> <div class="innerPageTmplBox dmDefaultPage  dmRespRowsWrapper" id="1260607478">  <div class="dmRespRow u_1749227485 hasBackgroundOverlay" style="text-align: center;" id="1749227485"> <div class="dmRespColsWrapper" id="1675328968"> <div class="u_1912801975 dmRespCol small-12 medium-12 large-12" id="1912801975"> <div class="u_1669238038 dmNewParagraph" data-element-type="paragraph" id="1669238038" style="transition: opacity 1s ease-in-out 0s; text-align: center;" data-version="5"> <h1 class="text-align-center" style="line-height: 1.2;"><span style="text-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px; color: rgb(255, 255, 255); display: initial;">Custom Home Construction</span></h1> 
 </div> <div class="widget-c4b2f9 u_1439007172 dmCustomWidget" data-lazy-load="true" data-title="" id="1439007172" dmle_extension="custom_extension" data-element-type="custom_extension" data-binding="W3siYmluZGluZ05hbWUiOiJtb3RGYWN0VGV4dCIsInZhbHVlIjoic2l0ZV90ZXh0Lm1vdGl2YXRpbmcgZmFjdG9ycyJ9XQ==" icon="false" surround="false" data-widget-id="c4b2f903d115403c8c21e9ec6044a4fe" data-widget-version="59" data-widget-config="eyJtb3RGYWN0VGV4dCI6IjxwIGNsYXNzPVwicnRlQmxvY2tcIj48c3BhbiBzdHlsZT1cImNvbG9yOnJnYigxMSwgMTEsIDExKVwiPjxzdHJvbmc+RnJlZSBDb25zdWx0YXRpb25zPC9zdHJvbmc+PC9zcGFuPjwvcD48cCBjbGFzcz1cInJ0ZUJsb2NrXCI+PHNwYW4gc3R5bGU9XCJjb2xvcjpyZ2IoMTEsIDExLCAxMSlcIj48c3Ryb25nPjI0LzcgRW1lcmdlbmN5IFNlcnZpY2U8L3N0cm9uZz48L3NwYW4+PC9wPjxwIGNsYXNzPVwicnRlQmxvY2tcIj48c3BhbiBzdHlsZT1cImNvbG9yOnJnYigxMSwgMTEsIDExKVwiPjxzdHJvbmc+Q3VzdG9tIEhvbWUgQnVpbGRlcnM8L3N0cm9uZz48L3NwYW4+PC9wPiIsImhvcml6VG9nZ2xlIjpmYWxzZSwibWZBbGlnbiI6Ik1GYWxpZ25DIiwiZGl2U3R5bGUiOiJtZi1ob3Jpei1idWwifQ=="> <div class="motFactCont MFalignC "> <p class="rteBlock"><span style="color:rgb(11, 11, 11)"><strong>Free Consultations</strong></span></p><p class="rteBlock"><span style="color:rgb(11, 11, 11)"><strong>24/7 Emergency Service</strong></span></p><p class="rteBlock"><span style="color:rgb(11, 11, 11)"><strong>Custom Home Builders</strong></span></p> 
 </div> 
 </div> 
@@ -1639,7 +1545,30 @@ background-size:cover !important}
  <meta itemprop="transcript" content=""></meta> 
  <div class="vidInner"> <center> <p class="vidTitle1">Learn More About</p> 
  <p class="vidTitle2">DC Builders</p> 
- <div class="playIcon"> <a value="hibu-video-splash" type="popup" href="assets/def7797e7ba3.bin" raw_url="/site/adb5d439eee94341b155f9417202fff0assets/def7797e7ba3.bin?nee=true&ed=true&showOriginal=true&preview=true&dm_try_mode=true&dm_checkSync=1" popup_target="hibu-video-splash" link_type="popup"><img src="assets/e0c9285d5490.png" alt="Play Video" class="playIcon" onerror="handleImageLoadError(this)"/></a> 
+ <div class="playIcon"> <a href="videos/dc-builders-promo.mp4" onclick="return dcbPromoPlay();"><img src="assets/e0c9285d5490.png" alt="Play Video" class="playIcon" onerror="handleImageLoadError(this)"/></a><script>
+function dcbPromoPlay(){
+  var o=document.getElementById('dcb-promo-overlay');
+  if(!o){
+    o=document.createElement('div');o.id='dcb-promo-overlay';
+    o.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;z-index:2147483000;background:rgba(10,8,7,.93);display:flex;align-items:center;justify-content:center;padding:4vmin';
+    var v=document.createElement('video');
+    v.controls=true;v.playsInline=true;v.setAttribute('playsinline','');
+    v.src='videos/dc-builders-promo.mp4';
+    v.style.cssText='width:100%;max-width:1100px;max-height:88vh;background:#000;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6)';
+    var x=document.createElement('button');
+    x.type='button';x.setAttribute('aria-label','Close video');x.innerHTML='&#10005;';
+    x.style.cssText='position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(20,16,14,.7);color:#fff;font-size:18px;cursor:pointer;line-height:1';
+    var esc=function(e){if(e.key==='Escape')close();};
+    var close=function(){try{v.pause();}catch(e){}o.style.display='none';document.removeEventListener('keydown',esc);};
+    x.addEventListener('click',close);
+    o.addEventListener('click',function(e){if(e.target===o)close();});
+    o.appendChild(v);o.appendChild(x);document.body.appendChild(o);
+    o.dcbOpen=function(){o.style.display='flex';try{v.currentTime=0;}catch(e){}document.addEventListener('keydown',esc);var p=v.play();if(p&&p.catch)p.catch(function(){});};
+  }
+  o.dcbOpen();
+  return false;
+}
+</script> 
 </div> 
 </center> 
 </div> 

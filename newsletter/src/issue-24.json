@@ -1,0 +1,16 @@
+{
+  "issue": 24,
+  "slug": "year-end-home-energy-checkup",
+  "sendDate": "December 26, 2026",
+  "subject": "A year-end energy checkup you can do in an hour",
+  "preheader": "Walk the house, mark the cold rooms, pull the bills, and build your spring fix-list.",
+  "title": "Your Year-End Home Energy Checkup",
+  "introHtml": "<p>The week between Christmas and New Year's is the one time most of us are actually home in daylight with nothing scheduled. It's also cold enough that your house will show you exactly where it's losing heat. Grab a notepad, pour a coffee, and give it an hour.</p>",
+  "articleHtml": "<h2>Walk the house with fresh eyes</h2><p>Comfort complaints are diagnostic data. A room that's always cold usually means one of three things: too little insulation above or beside it, air leaking through the shell, or a duct or baseboard run that isn't delivering. On a windy day, hold the back of your hand near outlets, window sashes, door bottoms, and the attic hatch — moving air means leakage, and leakage is usually the cheapest fix on the list.</p><ul><li><strong>Cold rooms:</strong> note which ones, and whether they're over a garage, above a crawlspace, or at the end of a duct run.</li><li><strong>Windows:</strong> condensation or frost on the inside glass points to air leakage or failed seals, not just \"old windows.\"</li><li><strong>Attic hatch:</strong> if it's not insulated and weatherstripped, it's a chimney straight out of your living space.</li><li><strong>Ice dams:</strong> icicles and ridges at the eaves mean heat is escaping into the attic and melting snow from below.</li></ul><h2>Let the bills tell the story</h2><p>Pull twelve months of utility bills and compare January against July. The gap between them is roughly what you spend on heating — and it's the number any improvement has to beat.</p><p>Rank your notes: air sealing and insulation first, mechanical fixes second, windows and bigger projects last. That ranked list is your spring plan. For more on how we approach <a href=\"https://www.dcbuildersofcapecod.com/construction-services\">energy-smart building and repairs</a>, or other homeowner guides, visit <a href=\"https://www.dcbuildersofcapecod.com/blog\">our blog</a>.</p>",
+  "tips": [
+    "Do the hand-test on a windy day — calm days hide half the leaks.",
+    "Compare each utility bill to the same month last year — an unexplained jump is a lead worth chasing.",
+    "Write the fix-list now, while the cold rooms are cold — you won't remember in April."
+  ],
+  "ctaLine": "If your walk-through turns up something you'd like a second opinion on, reply to this email or call Dave at (508) 566-1190 — consultations are always free."
+}

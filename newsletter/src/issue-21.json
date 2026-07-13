@@ -1,0 +1,16 @@
+{
+  "issue": 21,
+  "slug": "smart-thermostats-set-up-right",
+  "sendDate": "December 5, 2026",
+  "subject": "Smart thermostats: set up right or don't bother",
+  "preheader": "The setback rule for heat pumps, schedules that fit real life, and where sensors belong",
+  "title": "Smart Thermostats: Set Up Right or Don't Bother",
+  "introHtml": "<p>December is when your heating system earns its keep, and a smart thermostat left on factory settings is just an expensive clock. Ten minutes of honest setup decides whether it actually trims your bill. Here's how we'd set one up — and the rule that changes completely if you heat with a heat pump.</p>",
+  "articleHtml": "<h2>The schedule is the whole game</h2><p>A smart thermostat saves energy one way: holding a lower temperature during hours you don't need heat. So program your real week, not the default one. Ask yourself:</p><ul><li><strong>When is the house actually empty?</strong> If someone works from home, an away setback may barely exist — and that's fine.</li><li><strong>When are you asleep?</strong> A cooler bedroom overnight is the easiest win in most homes.</li><li><strong>Weekends differ from weekdays.</strong> Program them separately or the schedule fights you, and you'll override it until it's useless.</li></ul><h3>Heat pumps and boilers play by different rules</h3><p>With a boiler or furnace, a deep overnight setback generally saves fuel — the system recovers quickly in the morning. A heat pump is different: it's most efficient running steadily, and a deep setback can trigger the electric resistance backup during recovery, which can wipe out what the setback saved. With a heat pump, keep setbacks modest — a few degrees — or hold one steady temperature, and make sure the thermostat is configured for your exact equipment so it knows when to lock out that backup heat.</p><h3>Placement decides what the thermostat \"sees\"</h3><p>Mount it on an interior wall away from direct sun, drafts, the kitchen, and heat-throwing electronics. If your thermostat supports remote sensors, put them in the rooms you actually live in — not the hallway. More seasonal know-how lives on <a href=\"https://www.dcbuildersofcapecod.com/blog\">our blog</a>, and if a bigger efficiency project is on your mind, <a href=\"https://www.dcbuildersofcapecod.com/request-a-consultation\">a consultation is free</a>.</p>",
+  "tips": [
+    "Write your household's real weekly rhythm on paper first, then program the thermostat to match it — not the other way around.",
+    "Heat pump owners: if you see 'aux' or 'emergency heat' on the display during morning warm-up, your setback is too deep.",
+    "If everyone keeps hitting override, the schedule is wrong — fix the program instead of fighting it."
+  ],
+  "ctaLine": "Wondering whether your heating setup is working for you or against you? Hit reply with your question, or call (508) 566-1190 for a free consultation — we're happy to talk it through."
+}

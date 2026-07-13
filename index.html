@@ -633,17 +633,20 @@ html.dcb-splash-on #dcb-splash{display:flex}
 .dcb-ask-alt{display:block;font-size:14px;color:#d8cdc7;margin-top:14px}
 .dcb-ask-alt a{color:#fff;font-weight:700;text-decoration:none}
 .dcb-ask-alt a:hover{text-decoration:underline}
+.dcb-ask-sound{position:absolute;top:12px;right:12px;display:flex;align-items:center;gap:7px;background:rgba(20,16,14,.72);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s ease}
+.dcb-ask-sound:hover{background:rgba(20,16,14,.9)}
 @media (max-width:640px){.dcb-ask{gap:24px;padding:36px 6% 40px}.dcb-ask-text{text-align:center}}
 </style>
 <div class="dmRespColsWrapper" id="4800000002">
 <div class="dmRespCol small-12 medium-12 large-12" id="4800000003">
 <div class="dcb-ask">
   <div class="dcb-ask-video">
-    <video controls playsinline preload="metadata" aria-label="Dave introduces the Ask Dave chat assistant">
+    <video id="dcb-ask-vid" controls muted loop playsinline preload="metadata" aria-label="Dave introduces the Ask Dave chat assistant">
       <source src="videos/dave-chat-intro.mp4" type="video/mp4"/>
       Your browser does not support HTML video.
     </video>
     <div class="dcb-ask-badge"><img src="assets/dave-avatar.png" alt=""/><span>Dave &middot; Online</span><span class="dcb-ask-dot" aria-hidden="true"></span></div>
+    <button type="button" class="dcb-ask-sound" id="dcb-ask-sound" aria-label="Play with sound">&#128266; Tap for sound</button>
   </div>
   <div class="dcb-ask-text">
     <p class="dcb-ask-kicker">Ask Dave &middot; Online 24/7</p>
@@ -653,6 +656,47 @@ html.dcb-splash-on #dcb-splash{display:flex}
     <span class="dcb-ask-alt">Prefer to talk? Call <a href="tel:+15085661190">(508) 566-1190</a></span>
   </div>
 </div>
+<script>
+(function(){
+  var v = document.getElementById('dcb-ask-vid');
+  var snd = document.getElementById('dcb-ask-sound');
+  if (!v) return;
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var soundOn = false;
+  function tryPlay(){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+  if (snd) snd.addEventListener('click', function(){
+    soundOn = true;
+    v.loop = false;
+    v.muted = false;
+    v.currentTime = 0;
+    snd.style.display = 'none';
+    tryPlay();
+  });
+  v.addEventListener('volumechange', function(){
+    if (!v.muted && !soundOn) { soundOn = true; v.loop = false; if (snd) snd.style.display = 'none'; }
+  });
+  v.addEventListener('ended', function(){
+    if (!soundOn) return;
+    soundOn = false;
+    v.muted = true;
+    v.loop = true;
+    if (snd) snd.style.display = '';
+    tryPlay();
+  });
+  if (reduced) return;
+  v.muted = true;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { tryPlay(); }
+        else if (!v.paused) { v.pause(); }
+      });
+    }, {threshold: 0.35}).observe(v);
+  } else {
+    tryPlay();
+  }
+})();
+</script>
 </div>
 </div>
 </div>

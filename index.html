@@ -617,10 +617,13 @@ html.dcb-splash-on #dcb-splash{display:flex}
  <!-- ========= Ask Dave chatbot intro ========= -->
 <div class="dmRespRow" id="4800000001" style="background:linear-gradient(135deg,#352a2a 0%,#463939 55%,#544545 100%);padding:0;">
 <style>
-.dcb-ask{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:38px;max-width:1040px;margin:0 auto;padding:46px 5% 50px}
-.dcb-ask-avatarwrap{flex:0 0 auto;position:relative}
-.dcb-ask-avatar{display:block;width:min(190px,42vw);height:min(190px,42vw);border-radius:50%;border:5px solid rgba(255,255,255,.92);box-shadow:0 14px 40px rgba(0,0,0,.45)}
-.dcb-ask-dot{position:absolute;right:10px;bottom:14px;width:22px;height:22px;border-radius:50%;background:#4caf50;border:3.5px solid #463939}
+.dcb-ask{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:38px;max-width:1120px;margin:0 auto;padding:46px 5% 50px}
+.dcb-ask-video{flex:1 1 440px;min-width:290px;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 16px 44px rgba(0,0,0,.45);background:#000}
+.dcb-ask-video video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#000}
+.dcb-ask-badge{position:absolute;top:12px;left:12px;display:flex;align-items:center;gap:8px;background:rgba(20,16,14,.72);border-radius:999px;padding:5px 12px 5px 6px;pointer-events:none}
+.dcb-ask-badge img{width:28px;height:28px;border-radius:50%;display:block}
+.dcb-ask-badge span{font-family:'Roboto','Source Sans Pro',Arial,sans-serif;font-size:12.5px;font-weight:700;color:#fff}
+.dcb-ask-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4caf50;margin-left:2px}
 .dcb-ask-text{flex:1 1 380px;min-width:270px;max-width:560px;color:#fff;font-family:'Roboto','Source Sans Pro',Arial,sans-serif;text-align:left}
 .dcb-ask-kicker{font-size:13px;font-weight:700;letter-spacing:.14em;color:#cbbdb6;text-transform:uppercase;margin:0 0 10px}
 .dcb-ask-title{font-family:'Jost','Montserrat',Arial,sans-serif;font-weight:600;color:#fff;font-size:clamp(24px,3.2vw,34px);line-height:1.18;margin:0 0 14px}
@@ -635,9 +638,12 @@ html.dcb-splash-on #dcb-splash{display:flex}
 <div class="dmRespColsWrapper" id="4800000002">
 <div class="dmRespCol small-12 medium-12 large-12" id="4800000003">
 <div class="dcb-ask">
-  <div class="dcb-ask-avatarwrap">
-    <img class="dcb-ask-avatar" src="assets/dave-avatar.png" alt="Dave — the DC Builders AI assistant" width="512" height="512" loading="lazy"/>
-    <span class="dcb-ask-dot" aria-hidden="true" title="Online"></span>
+  <div class="dcb-ask-video">
+    <video controls playsinline preload="metadata" aria-label="Dave introduces himself and DC Builders">
+      <source src="videos/dave-intro.mp4" type="video/mp4"/>
+      Your browser does not support HTML video.
+    </video>
+    <div class="dcb-ask-badge"><img src="assets/dave-avatar.png" alt=""/><span>Dave &middot; Online</span><span class="dcb-ask-dot" aria-hidden="true"></span></div>
   </div>
   <div class="dcb-ask-text">
     <p class="dcb-ask-kicker">Ask Dave &middot; Online 24/7</p>

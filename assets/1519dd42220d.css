@@ -18,7 +18,7 @@ span.oneIcon:before{display:inline-block}
 .fixedPart{z-index:2222}
 .dmOuter{word-wrap:break-word}
 .dmInner{font-size:16px;background:rgb(255,255,255);color:#666}
-.dmDesktopBody .dmInner{min-width:960px}
+@media (min-width:960px){.dmDesktopBody .dmInner{min-width:960px}}
 .dmInner a{color:#463939}
 .dmInner ul:not(.defaultList),.dmInner ol:not(.defaultList){padding:0}
 .dmHeader{background:rgb(104,204,209);color:#666;text-align:center;position:relative;width:100%;max-width:100%}

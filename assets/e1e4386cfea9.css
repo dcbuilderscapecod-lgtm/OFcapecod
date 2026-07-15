@@ -32,3 +32,14 @@ html,body{overflow-x:clip}
 #dmRoot #dm .dmInner .imageWidget img{width:100%!important;height:auto!important}
 #dmRoot #dm .dmInner .dmforminput{width:100%!important}
 }
+/* Homepage topic banners on phones: these Duda rows put the house photo
+   on an empty spacer column, which collapses when columns stack. Give the
+   photo column a real banner height as a rounded card, center the title
+   and button beneath it, and always show the photo first. */
+@media (max-width:767px){
+#dmRoot #dm .dmInner div.u_1491768843 .dmRespColsWrapper,#dmRoot #dm .dmInner div.u_1931615254 .dmRespColsWrapper,#dmRoot #dm .dmInner div.u_1932216275 .dmRespColsWrapper{display:flex!important;flex-direction:column!important}
+#dmRoot #dm .dmInner div.u_1851416685,#dmRoot #dm .dmInner div.u_1845856144,#dmRoot #dm .dmInner div.u_1878009498{order:0!important;flex:0 0 auto!important;display:block!important;min-height:230px!important;width:auto!important;max-width:none!important;background-position:center center!important;background-size:cover!important;border-radius:12px;overflow:hidden;margin:10px 14px 0!important;box-shadow:0 4px 18px rgba(42,34,32,.16)}
+#dmRoot #dm .dmInner div.u_1243773797,#dmRoot #dm .dmInner div.u_1472354893,#dmRoot #dm .dmInner div.u_1595463500{order:1!important;flex:0 0 auto!important;padding:14px 18px 22px!important;text-align:center!important}
+#dmRoot #dm .dmInner div.u_1243773797 h3,#dmRoot #dm .dmInner div.u_1472354893 h3,#dmRoot #dm .dmInner div.u_1595463500 h3{text-align:center!important;margin:0 0 10px!important}
+#dmRoot #dm .dmInner div.u_1491768843,#dmRoot #dm .dmInner div.u_1931615254,#dmRoot #dm .dmInner div.u_1932216275{min-height:0!important;padding:10px 0!important}
+}

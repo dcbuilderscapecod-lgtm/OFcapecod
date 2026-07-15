@@ -23,7 +23,8 @@ html,body{overflow-x:clip}
    sections (dcb-*, dc-*) have their own responsive styles and keep
    their inline max-width/margin centering. */
 @media (max-width:767px){
-#dmRoot #dm .dmInner .dmRespRow,#dmRoot #dm .dmInner .dmRespColsWrapper{width:auto!important;max-width:100%!important;min-width:0!important}
+#dmRoot #dm .dmInner .dmRespRow,#dmRoot #dm .dmInner .dmRespColsWrapper{display:block!important;width:auto!important;max-width:100%!important;min-width:0!important}
+#dmRoot #dm .dmInner .dmRespCol{flex:0 0 100%!important}
 #dmRoot #dm .dmInner .dmRespCol{width:100%!important;max-width:100%!important;min-width:0!important;float:none!important;left:0!important}
 #dmRoot #dm .dmInner .dmRespCol div[class*="u_"]{width:auto!important;max-width:100%!important;min-width:0!important;left:0!important;float:none!important}
 #dmRoot #dm .dmInner div[class*="u_"].imageWidget,#dmRoot #dm .dmInner div[class*="u_"].dmImageSlider{width:auto!important;height:auto!important}

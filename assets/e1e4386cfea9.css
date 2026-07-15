@@ -3,3 +3,16 @@
 .poweredBy.poweredByHibu a,.poweredBy.poweredByHibu div{text-align:center!important;color:#666!important;text-decoration:none!important;max-width:960px!important;margin:0 auto!important}.poweredBy.poweredByHibu a:hover{text-decoration:underline!important}.poweredBy.poweredByHibu{background-color:#fff!important;font-size:11px!important;font-family:"Open Sans",Helvetica,Arial,sans-serif!important;font-weight:500!important}.poweredBy.poweredByHibu .poweredLine1{padding:15px 0 10px}.poweredBy.poweredByHibu .poweredLine2{padding-bottom:15px}
 @media (max-width:767px){#dmRoot .dmInner{min-width:0!important}}
 #dm .p_hfcontainer a.u_1225807196{background-color:#463939!important}#dm .p_hfcontainer a.u_1225807196 .text{color:#fff!important}#dm .p_hfcontainer a.u_1225807196:hover{background-color:#5a4a4a!important}#dm .p_hfcontainer a.u_1890576620{background-color:#463939!important}#dm .p_hfcontainer a.u_1890576620 .text{color:#fff!important}#dm .p_hfcontainer a.u_1890576620:hover{background-color:#5a4a4a!important}
+
+/* Mobile header overflow guards (fixed-px Duda column widths escape the
+   viewport on the criticalCss pages: index/about/contact) */
+@media (max-width:767px){
+html,body{overflow-x:clip}
+#dm .p_hfcontainer{max-width:100%;overflow-x:clip}
+#dmRoot #dm .dmInner div.u_1072419779{padding:8px 12px 4px!important}
+#dmRoot #dm .dmInner div.u_1072419779 .dmRespCol{width:100%!important;max-width:100%!important;min-width:0!important;float:none!important;left:0!important;text-align:center!important;margin:0!important}
+#dmRoot #dm .dmInner div.u_1072419779 .dmRespCol div{width:auto!important;max-width:100%!important;min-width:0!important;float:none!important;left:0!important;margin-left:auto!important;margin-right:auto!important}
+#dmRoot #dm .dmInner div.u_1072419779 p,#dmRoot #dm .dmInner div.u_1072419779 span{white-space:normal!important;text-align:center!important}
+#dmRoot #dm .dmInner div.u_1072419779 video.dcbLogoAnimV{width:100%!important;max-width:180px!important;height:auto!important;margin:0 auto!important;display:block}
+#dmRoot #dm .dmInner .dmHeaderResp{max-width:100%;overflow-x:clip}
+}

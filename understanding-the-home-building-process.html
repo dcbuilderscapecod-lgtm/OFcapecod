@@ -741,18 +741,10 @@
 
 
 <style id="hideAnimFix">
-  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
-    visibility: hidden;
+  /* Static export: the Duda animation runtime is not present, so animated elements must stay visible. */
+  .dmDesktopBody [data-anim-desktop], .dmDesktopBody [data-anim-extended], #dmRoot .flex-element [data-anim-extended] {
+    visibility: visible !important;
   }
-
-  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
-    visibility: hidden !important;
-  }
-
-  #dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
-    visibility: hidden;
-  }
-
 </style>
 
 

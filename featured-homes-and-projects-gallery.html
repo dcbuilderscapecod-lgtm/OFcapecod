@@ -1618,6 +1618,82 @@
 </div> 
 </div> 
 </div> 
+
+<div class="dmRespRow" id="drawn-to-built">
+  <style>
+    /* Scoped to #drawn-to-built only - nothing leaks to the rest of the page. */
+    #drawn-to-built {
+      padding: 10px 40px 30px;
+      scroll-margin-top: 96px; /* the email deep-links to #drawn-to-built; land clear of the sticky header */
+    }
+    #drawn-to-built .dtb-shell {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    #drawn-to-built .dtb-frame {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* reserved 16:9 box - zero layout shift while the video loads */
+      overflow: hidden;
+      background-color: #0b0b0b; /* matches the page's hero band (u_1014057098) */
+    }
+    #drawn-to-built .dtb-frame > .dtb-poster,
+    #drawn-to-built .dtb-frame > .dtb-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border: 0;
+    }
+    @media (max-width: 767px) {
+      #drawn-to-built {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  </style>
+  <div class="dmRespColsWrapper">
+    <div class="dmRespCol large-12 medium-12 small-12">
+      <div class="dmNewParagraph" data-element-type="paragraph">
+        <h3 class="text-align-center"><span style="display: unset;">From the first sketch to the final nail.</span></h3>
+      </div>
+      <div class="dtb-shell">
+        <div class="dtb-frame">
+          <!-- Poster image sits behind the video. If drawn-to-built.mp4 fails to load
+               (or <video> is unsupported), the page quietly shows this poster frame instead.
+               The video itself cannot be lazy-loaded (autoplay needs it), so the lazy hint
+               lives on this fallback image only. -->
+          <img class="dtb-poster" src="assets/drawn-to-built-poster.jpg" alt="" aria-hidden="true" loading="lazy" onerror="handleImageLoadError(this)"/>
+          <video class="dtb-video"
+                 src="assets/drawn-to-built.mp4"
+                 poster="assets/drawn-to-built-poster.jpg"
+                 muted autoplay loop playsinline controls
+                 preload="metadata"
+                 aria-label="Drawn to Built: architectural line sketches of four DC Builders homes resolving into photographs of the finished houses"
+                 onerror="this.style.display='none';">
+          </video>
+        </div>
+      </div>
+      <div class="dtb-shell" id="drawn-to-built-remodels" style="margin-top:28px;scroll-margin-top:96px;">
+        <div class="dtb-frame">
+          <img class="dtb-poster" src="assets/drawn-to-built-remodels-poster.jpg" alt="" aria-hidden="true" loading="lazy" onerror="handleImageLoadError(this)"/>
+          <video class="dtb-video"
+                 src="assets/drawn-to-built-remodels.mp4"
+                 poster="assets/drawn-to-built-remodels-poster.jpg"
+                 muted autoplay loop playsinline controls
+                 preload="metadata"
+                 aria-label="Drawn to Built, remodels edition: designer sketches of kitchens, bathrooms, decks and custom flooring resolving into photographs of the finished work"
+                 onerror="this.style.display='none';">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================== end "DRAWN TO BUILT" hero ================== -->
  <div class="u_1961452966 dmRespRow" id="1961452966"> <div class="dmRespColsWrapper" id="1851406849"> <div class="dmRespCol large-12 medium-12 small-12" id="1067638307"> <div class="u_1063269579 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1063269579" style="transition: opacity 1s ease-in-out 0s;"> <h3 class="text-align-center"><span style="display: unset;">Featured Projects</span></h3> 
 </div> 
  <div class="u_1112896883 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp photo-gallery-done text-layout-bottom captionAlignment-center_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="3" data-element-type="dPhotoGalleryId" data-desktop-text-layout="bottom" id="1112896883" data-image-hover-effect="zoomout" data-rows-to-show="100" data-desktop-caption-alignment="center_center" data-placeholder="false" data-mobile-caption-alignment="top_center"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
